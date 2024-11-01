@@ -12,7 +12,7 @@ type PypiHostedRepository struct {
 	Online  bool          `json:"online"`
 	Storage HostedStorage `json:"storage"`
 
-	*Cleanup   `json:"cleanuppolicies,omitempty"`
+	*Cleanup   `json:"cleanup,omitempty"`
 	*Component `json:"component,omitempty"`
 }
 
@@ -26,5 +26,5 @@ type PypiProxyRepository struct {
 
 	RoutingRule     *string `json:"routingRule,omitempty"`
 	RoutingRuleName *string `json:"routingRuleName,omitempty"`
-	*Cleanup        `json:"cleanuppolicies,omitempty"`
+	*Cleanup        `json:"cleanup,omitempty"`
 }

@@ -24,7 +24,7 @@ func getTestAptHostedRepository(name string) repository.AptHostedRepository {
 			Passphrase: tools.GetStringPointer("string"),
 		},
 		Cleanup: &repository.Cleanup{
-			PolicyNames: []string{"weekly-cleanuppolicies"},
+			PolicyNames: []string{"weekly-cleanup"},
 		},
 		Storage: repository.HostedStorage{
 			BlobStoreName:               "default",

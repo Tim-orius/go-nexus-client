@@ -22,7 +22,7 @@ type DockerHostedRepository struct {
 	Storage DockerHostedStorage `json:"storage"`
 	Docker  `json:"docker"`
 
-	*Cleanup   `json:"cleanuppolicies,omitempty"`
+	*Cleanup   `json:"cleanup,omitempty"`
 	*Component `json:"component,omitempty"`
 }
 
@@ -43,7 +43,7 @@ type DockerProxyRepository struct {
 	// The name of the routing rule assigned to this repository
 	RoutingRuleName *string `json:"routingRuleName,omitempty"`
 
-	*Cleanup `json:"cleanuppolicies,omitempty"`
+	*Cleanup `json:"cleanup,omitempty"`
 }
 
 // Docker contains data of a Docker Repositoriy

@@ -17,7 +17,7 @@ func getTestYumHostedRepository(name string) repository.YumHostedRepository {
 		Online: true,
 
 		Cleanup: &repository.Cleanup{
-			PolicyNames: []string{"weekly-cleanuppolicies"},
+			PolicyNames: []string{"weekly-cleanup"},
 		},
 		Storage: repository.HostedStorage{
 			BlobStoreName:               "default",

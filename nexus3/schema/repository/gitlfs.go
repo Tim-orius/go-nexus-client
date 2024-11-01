@@ -5,6 +5,6 @@ type GitLfsHostedRepository struct {
 	Online  bool          `json:"online"`
 	Storage HostedStorage `json:"storage"`
 
-	*Cleanup   `json:"cleanuppolicies,omitempty"`
+	*Cleanup   `json:"cleanup,omitempty"`
 	*Component `json:"component,omitempty"`
 }

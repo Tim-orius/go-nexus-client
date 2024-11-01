@@ -16,7 +16,7 @@ func getTestMavenHostedRepository(name string) repository.MavenHostedRepository 
 		Online: true,
 
 		Cleanup: &repository.Cleanup{
-			PolicyNames: []string{"weekly-cleanuppolicies"},
+			PolicyNames: []string{"weekly-cleanup"},
 		},
 		Storage: repository.HostedStorage{
 			BlobStoreName:               "default",

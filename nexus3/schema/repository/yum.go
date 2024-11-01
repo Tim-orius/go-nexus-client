@@ -22,7 +22,7 @@ type YumHostedRepository struct {
 	Storage HostedStorage `json:"storage"`
 	Yum     `json:"yum"`
 
-	*Cleanup   `json:"cleanuppolicies,omitempty"`
+	*Cleanup   `json:"cleanup,omitempty"`
 	*Component `json:"component,omitempty"`
 }
 
@@ -41,7 +41,7 @@ type YumProxyRepository struct {
 	// The name of the routing rule assigned to this repository
 	RoutingRuleName *string `json:"routingRuleName,omitempty"`
 
-	*Cleanup    `json:"cleanuppolicies,omitempty"`
+	*Cleanup    `json:"cleanup,omitempty"`
 	*YumSigning `json:"yumSigning,omitempty"`
 }
 

@@ -37,7 +37,7 @@ type MavenHostedRepository struct {
 	Maven   `json:"maven"`
 
 	// Cleanup data
-	*Cleanup `json:"cleanuppolicies,omitempty"`
+	*Cleanup `json:"cleanup,omitempty"`
 
 	// Components
 	*Component `json:"component,omitempty"`
@@ -59,7 +59,7 @@ type MavenProxyRepository struct {
 	// The name of the routing rule assigned to this repository
 	RoutingRuleName *string `json:"routingRuleName,omitempty"`
 
-	*Cleanup `json:"cleanuppolicies,omitempty"`
+	*Cleanup `json:"cleanup,omitempty"`
 }
 
 // Maven contains additional data of maven repository

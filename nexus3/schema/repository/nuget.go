@@ -19,7 +19,7 @@ type NugetHostedRepository struct {
 	Online  bool          `json:"online"`
 	Storage HostedStorage `json:"storage"`
 
-	*Cleanup   `json:"cleanuppolicies,omitempty"`
+	*Cleanup   `json:"cleanup,omitempty"`
 	*Component `json:"component,omitempty"`
 }
 
@@ -39,7 +39,7 @@ type NugetProxyRepository struct {
 	// The name of the routing rule assigned to this repository
 	RoutingRuleName *string `json:"routingRuleName,omitempty"`
 
-	*Cleanup `json:"cleanuppolicies,omitempty"`
+	*Cleanup `json:"cleanup,omitempty"`
 }
 
 // NugetProxy contains data specific to proxy repositories of format Nuget

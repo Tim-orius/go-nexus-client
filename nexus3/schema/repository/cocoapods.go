@@ -15,5 +15,5 @@ type CocoapodsProxyRepository struct {
 	// The name of the routing rule assigned to this repository
 	RoutingRuleName *string `json:"routingRuleName,omitempty"`
 
-	*Cleanup `json:"cleanuppolicies,omitempty"`
+	*Cleanup `json:"cleanup,omitempty"`
 }

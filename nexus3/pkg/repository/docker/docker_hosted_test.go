@@ -17,7 +17,7 @@ func getTestDockerHostedRepository(name string) repository.DockerHostedRepositor
 		Online: true,
 
 		Cleanup: &repository.Cleanup{
-			PolicyNames: []string{"weekly-cleanuppolicies"},
+			PolicyNames: []string{"weekly-cleanup"},
 		},
 		Storage: repository.DockerHostedStorage{
 			BlobStoreName:               "default",
@@ -44,7 +44,7 @@ func getTestProDockerHostedRepository(name string) repository.DockerHostedReposi
 		Online: true,
 
 		Cleanup: &repository.Cleanup{
-			PolicyNames: []string{"weekly-cleanuppolicies"},
+			PolicyNames: []string{"weekly-cleanup"},
 		},
 		Storage: repository.DockerHostedStorage{
 			BlobStoreName:               "default",
