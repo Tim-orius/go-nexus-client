@@ -1,9 +1,9 @@
-package cleanup_test
+package cleanuppolicies_test
 
 import (
 	"testing"
 
-	"github.com/datadrivers/go-nexus-client/nexus3/pkg/cleanup"
+	"github.com/datadrivers/go-nexus-client/nexus3/pkg/cleanuppolicies"
 	"github.com/datadrivers/go-nexus-client/nexus3/pkg/client"
 	"github.com/datadrivers/go-nexus-client/nexus3/pkg/tools"
 	"github.com/datadrivers/go-nexus-client/nexus3/schema/cleanuppolicies"
@@ -23,8 +23,8 @@ func getTestClient() *client.Client {
 	return client.NewClient(getDefaultConfig())
 }
 
-func getTestService() *cleanup.CleanupPolicyService {
-	return cleanup.NewCleanupPolicyService(getTestClient())
+func getTestService() *cleanuppolicies.CleanupPolicyService {
+	return cleanuppolicies.NewCleanupPolicyService(getTestClient())
 }
 
 func getDefaultConfig() client.Config {

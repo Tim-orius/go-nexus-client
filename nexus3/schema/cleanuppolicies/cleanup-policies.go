@@ -1,7 +1,7 @@
 package cleanuppolicies
 
 type CleanupPolicy struct {
-	Notes                   *string `json:"notes,omitempty"`                   // any details on the specific cleanup policy.
+	Notes                   *string `json:"notes,omitempty"`                   // any details on the specific cleanuppolicies policy.
 	CriteriaLastBlobUpdated *int    `json:"criteriaLastBlobUpdated,omitempty"` // the age of the component in days.
 	CriteriaLastDownloaded  *int    `json:"criteriaLastDownloaded,omitempty"`  // the last time the component had been downloaded in days.
 	CriteriaReleaseType     *string `json:"criteriaReleaseType,omitempty"`     // is one of: RELEASES_AND_PRERELEASES, PRERELEASES, RELEASES], Only maven2, npm and yum repositories support this field.

@@ -1,4 +1,4 @@
-package cleanup
+package cleanuppolicies
 
 import (
 	"encoding/json"
@@ -30,7 +30,7 @@ func (s *CleanupPolicyService) Create(policy *cleanuppolicies.CleanupPolicy) err
 		return err
 	}
 	if resp.StatusCode != http.StatusOK && resp.StatusCode != http.StatusCreated {
-		return fmt.Errorf("could not create cleanup policy '%s': HTTP: %d, %s", policy.Name, resp.StatusCode, string(body))
+		return fmt.Errorf("could not create cleanuppolicies policy '%s': HTTP: %d, %s", policy.Name, resp.StatusCode, string(body))
 	}
 	return nil
 }
@@ -42,7 +42,7 @@ func (s *CleanupPolicyService) Get(name string) (*cleanuppolicies.CleanupPolicy,
 		return nil, err
 	}
 	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("could not get cleanup policy '%s': HTTP: %d, %s", name, resp.StatusCode, string(body))
+		return nil, fmt.Errorf("could not get cleanuppolicies policy '%s': HTTP: %d, %s", name, resp.StatusCode, string(body))
 	}
 	policy := &cleanuppolicies.CleanupPolicy{}
 	if err := json.Unmarshal(body, policy); err != nil {
@@ -62,7 +62,7 @@ func (s *CleanupPolicyService) Update(policy *cleanuppolicies.CleanupPolicy) err
 		return err
 	}
 	if resp.StatusCode != http.StatusNoContent {
-		return fmt.Errorf("could not update cleanup policy '%s': HTTP: %d, %s", policy.Name, resp.StatusCode, string(body))
+		return fmt.Errorf("could not update cleanuppolicies policy '%s': HTTP: %d, %s", policy.Name, resp.StatusCode, string(body))
 	}
 	return nil
 }
@@ -74,7 +74,7 @@ func (s *CleanupPolicyService) Delete(name string) error {
 		return err
 	}
 	if resp.StatusCode != http.StatusNoContent {
-		return fmt.Errorf("could not delete cleanup policy '%s': HTTP: %d, %s", name, resp.StatusCode, string(body))
+		return fmt.Errorf("could not delete cleanuppolicies policy '%s': HTTP: %d, %s", name, resp.StatusCode, string(body))
 	}
 	return nil
 }
@@ -85,11 +85,11 @@ func (s *CleanupPolicyService) List() ([]*cleanuppolicies.CleanupPolicy, error) 
 		return nil, err
 	}
 	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("could not list cleanup policies: HTTP: %d, %s", resp.StatusCode, string(body))
+		return nil, fmt.Errorf("could not list cleanuppolicies policies: HTTP: %d, %s", resp.StatusCode, string(body))
 	}
 	var policies []*cleanuppolicies.CleanupPolicy
 	if err := json.Unmarshal(body, &policies); err != nil {
-		return nil, fmt.Errorf("could not unmarshal cleanup policies: %v", err)
+		return nil, fmt.Errorf("could not unmarshal cleanuppolicies policies: %v", err)
 	}
 	return policies, nil
 }
