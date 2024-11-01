@@ -12,7 +12,7 @@ type RubyGemsHostedRepository struct {
 	Online  bool          `json:"online"`
 	Storage HostedStorage `json:"storage"`
 
-	*Cleanup   `json:"cleanup,omitempty"`
+	*Cleanup   `json:"cleanuppolicies,omitempty"`
 	*Component `json:"component,omitempty"`
 }
 
@@ -31,5 +31,5 @@ type RubyGemsProxyRepository struct {
 	// The name of the routing rule assigned to this repository
 	RoutingRuleName *string `json:"routingRuleName,omitempty"`
 
-	*Cleanup `json:"cleanup,omitempty"`
+	*Cleanup `json:"cleanuppolicies,omitempty"`
 }

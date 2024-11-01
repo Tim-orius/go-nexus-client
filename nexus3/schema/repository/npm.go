@@ -12,7 +12,7 @@ type NpmHostedRepository struct {
 	Online  bool          `json:"online"`
 	Storage HostedStorage `json:"storage"`
 
-	*Cleanup   `json:"cleanup,omitempty"`
+	*Cleanup   `json:"cleanuppolicies,omitempty"`
 	*Component `json:"component,omitempty"`
 }
 
@@ -31,7 +31,7 @@ type NpmProxyRepository struct {
 	// The name of the routing rule assigned to this repository
 	RoutingRuleName *string `json:"routingRuleName,omitempty"`
 
-	*Cleanup `json:"cleanup,omitempty"`
+	*Cleanup `json:"cleanuppolicies,omitempty"`
 	*Npm     `json:"npm,omitempty"`
 }
 

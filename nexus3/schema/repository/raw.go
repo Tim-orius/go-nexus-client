@@ -23,7 +23,7 @@ type RawHostedRepository struct {
 	Online  bool          `json:"online"`
 	Storage HostedStorage `json:"storage"`
 
-	*Cleanup   `json:"cleanup,omitempty"`
+	*Cleanup   `json:"cleanuppolicies,omitempty"`
 	*Component `json:"component,omitempty"`
 	*Raw       `json:"raw,omitempty"`
 }
@@ -43,7 +43,7 @@ type RawProxyRepository struct {
 	// The name of the routing rule assigned to this repository
 	RoutingRuleName *string `json:"routingRuleName,omitempty"`
 
-	*Cleanup `json:"cleanup,omitempty"`
+	*Cleanup `json:"cleanuppolicies,omitempty"`
 	*Raw     `json:"raw,omitempty"`
 }
 

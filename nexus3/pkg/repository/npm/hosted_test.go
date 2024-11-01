@@ -16,7 +16,7 @@ func getTestNpmHostedRepository(name string) repository.NpmHostedRepository {
 		Online: true,
 
 		Cleanup: &repository.Cleanup{
-			PolicyNames: []string{"weekly-cleanup"},
+			PolicyNames: []string{"weekly-cleanuppolicies"},
 		},
 		Storage: repository.HostedStorage{
 			BlobStoreName:               "default",

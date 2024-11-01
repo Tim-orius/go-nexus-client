@@ -16,7 +16,7 @@ func getTestRHostedRepository(name string) repository.RHostedRepository {
 		Online: true,
 
 		Cleanup: &repository.Cleanup{
-			PolicyNames: []string{"weekly-cleanup"},
+			PolicyNames: []string{"weekly-cleanuppolicies"},
 		},
 		Storage: repository.HostedStorage{
 			BlobStoreName:               "default",
